@@ -1,6 +1,7 @@
 #! /usr/bin/env python
 import numpy as np
 from sklearn import cross_validation
+from sklearn import preprocessing
 from sklearn import svm
 
 
@@ -19,6 +20,8 @@ def load_dataset():
 
 def main():
     X, y = load_dataset()
+    # normalize each feature
+    X = preprocessing.normalize(X, axis=0)
 
     clf = svm.SVC()
     # 5-fold
