@@ -1,0 +1,18 @@
+# Assignment 2: Support Vector Machine
+
+1. Use k-fold cross-validation to evaluate the performance of SVM on WINE dataset (with the default parameter setting).
+
+2. Evaluate the performance (using K-fold) of SVM on your dataset by tuning parameter C (slack penalty). See the slides of SVM about "how to choose C".
+
+3. Use cross-validation on training dataset to pick the best C, use the best C on the training data to train the model, and apply the model on the test data. Use k-fold cross-validation to evaluate the performance. Show the best C and the test error in each fold. Also show the average error of all folds. (Note: there are two layers of cross-validation. similar to decision tree parameter tuning.) 
+
+4. Apply SVM with RBF kernel to your dataset. Show k-fold cross-validation results using the default parameter setting. 
+
+5. (optional) Use cross-validation to pick the best C and the best \gamma (variance parameter for RBF kernel). Show the performance. (Note: You need grid search to know the best combination of C and \gamma. There are two nested layers of cross-validation.)
+ 
+Note:
+Use the same WINE dataset (download the dataset from this UCI Machine Learning Repository: http://archive.ics.uci.edu/ml/datasets/Wine).
+
+We recommend using scikit-learn package (http://scikit-learn.org/stable/index.html). 
+
+You need to normalize features for SVM. Describe which normalization you used.
