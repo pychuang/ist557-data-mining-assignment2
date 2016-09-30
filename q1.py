@@ -21,7 +21,7 @@ def load_dataset():
 def main():
     X, y = load_dataset()
     # normalize each feature
-    X = preprocessing.normalize(X, axis=0)
+    X = preprocessing.scale(X)
 
     clf = svm.SVC()
     # 5-fold

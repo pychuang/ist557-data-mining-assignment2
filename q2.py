@@ -22,14 +22,14 @@ def load_dataset():
 def main():
     X, y = load_dataset()
     # normalize each feature
-    X = preprocessing.normalize(X, axis=0)
+    X = preprocessing.scale(X)
 
     for power in xrange(-4, 5):
         c = math.pow(10, power)
         clf = svm.SVC(C=c)
         # 5-fold
         scores = cross_validation.cross_val_score(clf, X, y, cv=5)
-        print 'C =', c, 'scores = ',  scores
+        print "C = %f\tscores = %s"  % (c , scores)
 
 
 if __name__ == '__main__':

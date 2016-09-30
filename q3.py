@@ -22,7 +22,7 @@ def load_dataset():
 def main():
     X, y = load_dataset()
     # normalize each feature
-    X = preprocessing.normalize(X, axis=0)
+    X = preprocessing.scale(X)
 
     # 5-fold
     for train_index, test_index in cross_validation.KFold(n=len(X), n_folds=5, shuffle=True):

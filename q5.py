@@ -23,7 +23,7 @@ def load_dataset():
 def main():
     X, y = load_dataset()
     # normalize each feature
-    X = preprocessing.normalize(X, axis=0)
+    X = preprocessing.scale(X)
 
     param_grid = [
         {'C': [math.pow(10, power) for power in xrange(-4, 5)], 'gamma': [math.pow(2, power) for power in xrange(-4, 5)]}
